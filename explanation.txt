@@ -1,0 +1,9 @@
+reinforcement learning: RL is a way to train an agent into making decisions based off of previous results and what works best. rather than giving random actions, it learns what decisions are a better result and tailor its decisions based off of it. its like a loop where an agent interacts in an environment through trial and error, then it gets scored, and overtime learns what decisions are better. it can have some noise because of the trial and error portion.
+
+graph 1 - pytorch basics results graph
+
+the loss went down fast at first and then flattened out. The loss measures how far off the models predictions are, so the drop means that the predictions got better. The red line ended up close to y = 2x + 1 (it was given as y = 2x + 0.98). The blue dots show that there was some noise, so even a good line will miss some of them/
+
+graph 2 - training curve graph
+
+the blue line shows how many steps the pole stayed up in each attempt. the orange line averages the last 25 attempts, so it is easier to see how the agent is doing over time. The trained agent hit the 500-step limit multiple times. By the end of it, the average dropped down to about 80. It learned how to balance the pole for longer than random pushes, but it didn't keep doing it consistently. 

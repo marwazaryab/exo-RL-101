@@ -1,0 +1,3 @@
+
+
+At first, I didn't get why we ran the cartpole with random pushes. but after reading the introduction for the third portion it clicked to me that we are trying to compare reinforcement learning with randomized guesses. I was also confused about the blue and orange lines in the graph. Once I could picture that blue is one attempt and the orange is the average of the last 25 attempts, I could see that it was doing well for several attemps in a row.

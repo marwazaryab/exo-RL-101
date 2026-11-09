@@ -52,8 +52,7 @@ class LineModel(nn.Module):
         #
         # TODO 1: replace the line below with a `return` statement that
         # calls self.linear on x and returns the output
-        raise NotImplementedError
-
+        return self.linear(x)
 
 model = LineModel()
 
@@ -99,7 +98,8 @@ for epoch in range(num_epochs):
 
     # TODO 2: call `loss_fn` with `predictions` and `y` as the second argument. 
     # to calculate the loss. Store the result in a variable named `loss`.
-    raise NotImplementedError
+    loss = loss_fn(predictions, y)    
+
 
     # Step 3: Backward pass + parameter update.
     # Clear gradients from the previous training step. PyTorch accumulates
@@ -116,18 +116,11 @@ for epoch in range(num_epochs):
     # starting from the loss and working backward through the neural network.
     loss.backward()
 
-
-    # Step 5: Backward pass + update:
-    # First, clear the gradients from the previous training step.
-    # TODO 3: call `.backward()` on `loss`
-    raise NotImplementedError
-
-    # Step 6: Update the model's parameters.
+    # Step 5: Update the model's parameters.
     # The optimizer uses the gradients computed in the backward pass to
     # adjust each trainable parameter. This is the step where the model
     # learns by taking a small step toward reducing the loss.
-    # TODO 4: call `.step()` on `optimizer`
-    raise NotImplementedError
+    optimizer.step()
 
     # Step 7: Save the loss so we can look at how training progressed later.
     # `.item()` converts the single-value tensor into a Python number.
